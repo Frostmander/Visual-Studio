@@ -7,10 +7,21 @@
     <title>Document</title>
 
     <style>
+
+        .maindiv {
+            display: flex;
+            margin-top: 100px;
+        }
+
+        .tablas{
+            margin: auto;
+        }
+        
         td {
             padding-left: 25px;
             padding-right: 25px;
         }
+
         img{
             padding: 25px;
             width: 75px;
@@ -20,54 +31,54 @@
 
 </head>
 <body>
-    
-    <table  border=2px>
-        <tr>
-            <td>
-                <b>LENGUAJE</B>
-            </td>
-            <td>
-                <b>DESCRIPCIÓN</b>
-            </td>
-            <td>
-                <b>IMAGEN</b>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://es.wikipedia.org/wiki/HTML" target="_blank">HTML</a>
-            </td>
-            <td>
-                <i>Lenguaje de marcas</i>
-            </td>
-            <td>
-                <img src="imagenes/html.png" >
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://es.wikipedia.org/wiki/Python" target="_blank">Python</a>
-            </td>
-            <td>
-                <i>Lenguaje de programación</i>
-            </td>
-            <td>
-                <img src="imagenes/python.png" >
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a href="https://es.wikipedia.org/wiki/C_Sharp" target="_blank">C#</a>
-            </td>
-            <td>
-                <i>Lenguaje de Microsoft</i>
-            </td>
-            <td>
-                <img src="imagenes/C.png" >
-            </td>
-        </tr>
-    </table>
-
+    <div class="maindiv">
+        <table  class="tablas" border=1px>
+            <tr>
+                <td>
+                    <b>LENGUAJE</B>
+                </td>
+                <td>
+                    <b>DESCRIPCIÓN</b>
+                </td>
+                <td>
+                    <b>IMAGEN</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://es.wikipedia.org/wiki/HTML" target="_blank">HTML</a>
+                </td>
+                <td>
+                    <i>Lenguaje de marcas</i>
+                </td>
+                <td>
+                    <img src="imagenes/html.png" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://es.wikipedia.org/wiki/Python" target="_blank">Python</a>
+                </td>
+                <td>
+                    <i>Lenguaje de programación</i>
+                </td>
+                <td>
+                    <img src="imagenes/python.png" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://es.wikipedia.org/wiki/C_Sharp" target="_blank">C#</a>
+                </td>
+                <td>
+                    <i>Lenguaje de Microsoft</i>
+                </td>
+                <td>
+                    <img src="imagenes/C.png" >
+                </td>
+            </tr>
+        </table>
+    </div>
 
 </body>
 </html>
