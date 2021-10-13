@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+
+    <style>
+        input{
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <form>
+        <label>Nombre y apellidos</label><br>
+        <input type="text" name="nombre">
+        <br>
+
+        <label>Tu email</label><br>
+        <input type="email" name="email">
+        <br>
+
+        <label>Tu teléfono</label><br>
+        <input type="number" name="telefono">
+        <br>
+
+        <label>Vehiculo</label><br>
+        <dd>
+        <dl><input type="checkbox" name="Vehiculo" value="Coche">Coche</dl>
+
+        <dl><input type="checkbox" name="Vehiculo" value="Moto">Moto</dl>
+        </dd>
+        <br>
+
+        <label>Fecha de nacimiento</label><br>
+        <input type="date" name="Fecha">
+        <br>
+
+        <label>Sexo</label><br>
+        <dd>
+            <dl><input type="radio" name="sexo" value="Hombre">Hombre</dl>
+        
+            <dl><input type="radio" name="sexo" value="Mujer">Mujer</dl>
+        </dd>
+        <br>
+
+        <label>Asunto</label><br>
+        <input type="text" name="asunto">
+        <br>
+
+        <label>Comentarios</label><br>
+        <textarea name="mensaje" placeholder="Escribe algo" rows="5"></textarea>
+        <br>
+
+        <button type="submit">ENVIAR</button>
+    </form>
+
+</body>
+</html>
