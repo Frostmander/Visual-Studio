@@ -1,0 +1,42 @@
+
+body{
+    background-color: lavender;
+}
+
+div {
+    display: flex;
+    margin-top: 100px;
+    float: initial;
+
+}
+
+
+.tablas{
+    margin: auto;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-style: solid;
+    border: solid 3px blueviolet;
+
+
+}        
+
+.cabecera{
+    font-size: 28px;
+    color: black;
+}
+
+td {
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    border: solid 3px blueviolet;
+
+}
+
+img{
+    width: 100px;
+}
