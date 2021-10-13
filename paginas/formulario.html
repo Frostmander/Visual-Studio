@@ -8,14 +8,14 @@
 
     <style>
         input{
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
     </style>
 
 </head>
 <body>
     
-    <form>
+    <form action="formularioinfo.html" method="post"> 
         <label>Nombre y apellidos</label><br>
         <input type="text" name="nombre">
         <br>
@@ -28,6 +28,25 @@
         <input type="number" name="telefono">
         <br>
 
+        <label>Datos</label><br>
+        <input type="text" name="datos" list="datos">
+        <datalist id="datos">
+            <option value="Opcion1"></option>
+            <option value="Opcion2"></option>
+            <option value="Opcion3"></option>
+            <option value="Opcion4"></option>
+            <option value="Opcion5"></option>
+            <option value="Opcion6"></option>
+        </datalist>
+        <br>
+
+        <label>Pais</label><br>
+        <select name="pais">
+            <option value="Españita">Españita</option>
+            <option value="Francia">Francia</option>
+            <option value="Portugal">Portugal</option>
+        </select>
+        <br>
         <label>Vehiculo</label><br>
         <dd>
         <dl><input type="checkbox" name="Vehiculo" value="Coche">Coche</dl>
