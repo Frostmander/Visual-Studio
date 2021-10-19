@@ -9,11 +9,11 @@ anio=int(input())
 
 if mes==1 :
     mes=13
-    anio=anio-1
+    anio-=1
 
 if mes==2:
     mes=14
-    anio=anio-1
+    anio-=1
 
 num1= trunc(((mes + 1) * 3) / 5)
 num2= trunc(anio/4)
@@ -27,20 +27,20 @@ num3= num1-(num2*7)
 if num3==0 :
     print("Naciste en sábado") 
 
-if num3==1 :
+elif num3==1 :
     print("Naciste en domingo") 
 
-if num3==2 :
+elif num3==2 :
     print("Naciste en lunes") 
 
-if num3==3 :
+elif num3==3 :
     print("Naciste en martes") 
 
-if num3==4 :
+elif num3==4 :
     print("Naciste en miercoles") 
 
-if num3==5 :
+elif num3==5 :
     print("Naciste en jueves") 
 
-if num3==6 :
+elif num3==6 :
     print("Naciste en viernes") 
