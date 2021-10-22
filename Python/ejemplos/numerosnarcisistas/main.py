@@ -22,6 +22,11 @@ while (opcion!=0):
         else:
             print("No es narcisista")
 
+    elif opcion==3:
+        print("Introduce tu año de nacimiento:")
+        numero=int(input())
+        rangoBisiestos(numero)
+
     elif opcion==0:
         print("¡Adios!")
         break

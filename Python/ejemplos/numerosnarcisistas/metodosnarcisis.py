@@ -2,15 +2,15 @@ def mostrarMenu():
     print("0- Salir")
     print("1- Bisiesto")
     print("2- Narcisista")
+    print("3- Bisiestos desde tu fecha")
     print("Selecciona una opción")
 
 
 def anioBisiesto(anio):
     if(anio%4==0 and (anio%100!=0 or anio%400==0)):
-        valor=True
+        return True
     else:
-        valor=False
-    return valor
+        return False
     
 
 def numNarcisista(textoNum):
@@ -24,7 +24,14 @@ def numNarcisista(textoNum):
         suma=suma+potencia  
    
     if(suma==int(textoNum)):
-        valor = True
+        return True
     else:
-        valor = False
-    return valor
+        return False
+
+
+def rangoBisiestos (fecha):
+
+    for i in range(fecha,2021):
+        if anioBisiesto(i)==True:
+            print(i)
+
