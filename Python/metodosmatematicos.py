@@ -72,3 +72,7 @@ while opcion!=0:
         print("Opcion incorrecta")
     
 print("Adios!")
+
+
+print("Pulsa intro para continuar")
+input()
