@@ -31,7 +31,7 @@ class Coche:
         else:
             print("Acelerando...")
             self.velocidad+=10
-            print(self.velocidad)
+            print(print("Velocidad actual " + self.marca + ": " + str(self.velocidad)))
 
     def frenar(self):
         if(self.velocidad==0):
@@ -40,5 +40,5 @@ class Coche:
         else:
             print("Frenando...")
             self.velocidad-=10
-            print(self.velocidad)
+            print(print("Velocidad actual " + self.marca + ": " + str(self.velocidad)))
 
