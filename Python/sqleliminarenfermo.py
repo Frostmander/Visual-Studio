@@ -23,12 +23,3 @@ sql="delete from enfermo where inscripcion=?"
 cursor.execute(sql, (inscripcion))
 cursor.commit()
 cursor.close()
-
-cursor=conexion.cursor()
-sql="select apellido, inscripcion from enfermo"
-cursor.execute(sql)
-print(("---------ENFERMOS---------"))
-for row in cursor:
-    print(row.apellido + ", " + str(row.inscripcion))
-cursor.close()
-conexion.close()
