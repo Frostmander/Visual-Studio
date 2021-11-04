@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace FundamentosLenguaje
 {
@@ -6,27 +6,9 @@ namespace FundamentosLenguaje
     {
         static void Main(string[] args)
         {
-            ConjeturaCollatz();
+            DiaNacimiento();
         }
 
-        static void ConjeturaCollatz() {
-            Console.WriteLine("Introduzca un número");
-            string dato = Console.ReadLine();
-            int numero = int.Parse(dato);
-
-            while (numero != 1) {
-
-                if (numero % 2 == 0)
-                {
-                    numero = numero / 2;
-                }
-                else {
-                    numero = numero * 3 + 1;
-                }
-                Console.WriteLine(numero);
-            
-            }
-        }
 
         static void DiaNacimiento()
         {
@@ -125,7 +107,7 @@ namespace FundamentosLenguaje
                 menor = numero1;
             }
             else if (numero2 <= numero1 && numero2 <= numero3)
-            { 
+            {
                 menor = numero2;
             }
             else
