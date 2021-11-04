@@ -6,7 +6,26 @@ namespace FundamentosLenguaje
     {
         static void Main(string[] args)
         {
-            ConjeturaCollatz();
+            NumerosPares();
+        }
+
+
+        static void NumerosPares()
+        {
+            Console.WriteLine("Introduzca un inicio: ");
+            string dato = Console.ReadLine();
+            int inicio = int.Parse(dato);
+            Console.WriteLine("Introduzcxa un fin: ");
+            dato = Console.ReadLine();
+            int fin = int.Parse(dato);
+
+            for (int i = inicio; i <= fin; i++)
+            {
+                if (i % 2 == 0) {
+                    Console.WriteLine(i);
+                }
+                
+            }
         }
 
         static void ConjeturaCollatz() {
