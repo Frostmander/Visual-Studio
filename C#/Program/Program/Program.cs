@@ -52,7 +52,7 @@ namespace Program
             Console.WriteLine("Menor: " + menor);
             Console.WriteLine("Intermedio: " + intermedio);
         }
-
+        
         static void NumeroPositivoNegativo() {
             Console.WriteLine("Dame número: ");
             string dato = Console.ReadLine();
