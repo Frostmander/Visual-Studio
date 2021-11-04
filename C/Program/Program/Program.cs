@@ -107,7 +107,7 @@ namespace FundamentosLenguaje
                 menor = numero1;
             }
             else if (numero2 <= numero1 && numero2 <= numero3)
-            {
+            { 
                 menor = numero2;
             }
             else
