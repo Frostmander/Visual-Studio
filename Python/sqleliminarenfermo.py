@@ -1,25 +1,16 @@
 import pyodbc
-print("Eliminar enfermo")
-servidor = "LOCALHOST\SQLEXPRESS"
-bbdd="HOSPITAL"
-usuario = "SA"
-password = "azure"
-conexion = pyodbc.connect("DRIVER={ODBC Driver 17 for SQL Server};SERVER=" + servidor
-+ "; DATABASE=" + bbdd + "; UID=" + usuario + "; PWD=" + password)
-
-cursor=conexion.cursor()
-sql="select apellido, inscripcion from enfermo"
-cursor.execute(sql)
-print(("---------ENFERMOS---------"))
-for row in cursor:
-    print(row.apellido + ", " + str(row.inscripcion))
-cursor.close()
+from conexionhospital import conexionHospital
 
 print(("Introduce el nº de inscripcion:"))
 inscripcion=input()
 
-cursor=conexion.cursor()
-sql="delete from enfermo where inscripcion=?"
-cursor.execute(sql, (inscripcion))
-cursor.commit()
-cursor.close()
+connection = conexionHospital()
+respuesta=connection.eliminarEnfermo(inscripcion)
+print("Registros eliminados: " + str(respuesta))
+
+print(("Introduce el nº de inscripcion para modificar:"))
+ins=int(input())
+print(("Introduce el nuevo apellido:"))
+ape=input()
+respuesta2 = connection.modificarEnfermo(ape,ins)
+print("Registros eliminados: " + str(respuesta2))
