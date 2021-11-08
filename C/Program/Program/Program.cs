@@ -1,14 +1,175 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Text;
+using Program.Models;
 
-namespace FundamentosLenguaje
+namespace Program
 {
+    enum TipoChar { Letras, Numeros, Simbolos}
     class Program
     {
         static void Main(string[] args)
         {
-            NumerosPares();
+            Persona person = new Persona();
+            person.Nombre = "Sinoshuke";
+            person.Apellidos = "Yamamoto";
+            //person.Edad = 23;
+            //person.Nacionalidad = Paises.Japon;
+            person[0] = "Ojos azules";
+            person[1] = "Pelo largo";
+            person[2] = "Cicatriz";
+            person.ConvertirDescripciones();
+            Console.WriteLine(person.Nombre + ", " + person.Apellidos + ", " + person.Edad);
+            Console.WriteLine(person.Nacionalidad);
+            Console.WriteLine(person[1]);
+            Console.WriteLine(person.GetNombreCompleto());
+            Console.WriteLine(person.GetNombreCompleto(true));
+            Console.WriteLine(person.GetNombreCompleto(23));
+
+            Persona person2 = new Persona("Lucas", "Trotacielos");
+            Console.WriteLine(person2.GetNombreCompleto());
+
+            Empleado emp = new Empleado();
+            emp.Nombre = "Luis";
+            emp.Apellidos = "Barcenas";
+            Console.WriteLine(emp.GetNombreCompleto());
         }
 
+        static void ListaNombres() {
+            String respuesta = " ";
+            List<string> nombres = new List<string>();
+
+            while (respuesta != "PARA") {
+                Console.WriteLine("Introduce un nombre: (PARA)");
+                respuesta=Console.ReadLine();
+                nombres.Add(respuesta);
+            }
+
+            nombres.Remove("PARA");
+            Console.WriteLine("--------------------------------------");
+            foreach (string name in nombres) {
+                Console.WriteLine(name);
+            }
+        }
+
+        static void EjemploColecciones() {
+
+            List<int> numeros = new List<int>();
+            numeros.Add(34);
+            numeros.Add(432);
+            foreach (int num in numeros) {
+                Console.WriteLine(num);
+            }
+
+            List<String> nombres = new List<string>();
+            nombres.Add("Padmé");
+            nombres.Add("Leia");
+            nombres.Add("Luke");
+            nombres.Add("Mace");
+            //nombres.Remove("Leia");
+            nombres.RemoveAt(3);
+            foreach (string name in nombres) {
+                Console.WriteLine(name);
+            }
+
+        }
+
+        static void InvertirTextoStringBuilder(String datos)
+        {
+            Stopwatch cronos = new Stopwatch();
+            cronos.Start();
+            StringBuilder texto = new StringBuilder();
+            texto.Append(datos);
+            for (int i = 0; i < texto.Length; i++)
+            {
+                char letra = texto[texto.Length - 1];
+                texto = texto.Remove(texto.Length - 1, 1);
+                texto = texto.Insert(i, letra.ToString());
+            }
+            cronos.Stop();
+            Console.WriteLine(texto);
+            Console.Write("Milisegundos: " + cronos.Elapsed.TotalMilliseconds);
+            Console.WriteLine("-------------------------------");
+        }
+
+        static void InvertirTextoString(String texto) 
+        {
+            Stopwatch cronos = new Stopwatch();
+            cronos.Start();
+            for (int i = 0; i < texto.Length; i++) {
+                char letra = texto[texto.Length - 1];
+                texto = texto.Remove(texto.Length - 1, 1);
+                texto = texto.Insert(i, letra.ToString());
+            }
+            cronos.Stop();
+            Console.WriteLine(texto);
+            Console.Write("Milisegundos: " + cronos.Elapsed.TotalMilliseconds);
+            Console.WriteLine("-------------------------------");
+        }
+
+        static void SumarNumerosString() {
+            Console.WriteLine("Introduzca un texto");
+            string texto = Console.ReadLine();
+            int suma = 0;
+
+            for (var i = 0; i < texto.Length; i++) {
+                char caracter = texto[i];
+
+                //int numero = (int)caracter;
+                int numero = int.Parse(caracter.ToString());
+
+                suma += numero;
+            }
+            Console.WriteLine(suma);
+        }
+
+        static void EjemploChar(TipoChar tipo)
+        {
+            for (int i = 0; i <= 255; i++)
+            {
+                char letra = (char)i;
+                if (tipo == TipoChar.Simbolos)
+                {
+                    if (char.IsSymbol(letra))
+                    {
+                        Console.WriteLine(letra);
+                    }
+                }
+                else if (tipo == TipoChar.Letras)
+                {
+                    if (char.IsLetter(letra))
+                    {
+                        Console.WriteLine(letra);
+                    }
+                }
+                else if (tipo == TipoChar.Numeros)
+                {
+                    if (char.IsNumber(letra))
+                    {
+                        Console.WriteLine(letra);
+                    }
+                }
+            }
+        }
+
+        static void SumarNumeros() {
+
+            Console.WriteLine("Introduzca números: (0 para terminar)");
+            string dato=Console.ReadLine();
+            int numero = int.Parse(dato);
+            int suma = 0;
+            while (numero != 0) {
+                suma += numero;
+                Console.WriteLine("Suma: " + suma);
+                Console.WriteLine("Introduzca números: (0 para terminar)");
+                dato = Console.ReadLine();
+                numero = int.Parse(dato);
+            }
+            Console.WriteLine("¡Adios!");
+
+
+        }
 
         static void NumerosPares()
         {
